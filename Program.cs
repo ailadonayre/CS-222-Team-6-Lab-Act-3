@@ -121,7 +121,7 @@ class Program
     static void ViewAllEntries(Diary diary)
     {
         Console.WriteLine($"\n{new string('-', 70)}\n");
-        WriteWithColor($"{AnsiCodes.Bold}\n\t\t\tAll Diary Entries{AnsiCodes.Reset}", ConsoleColor.Yellow);
+        WriteWithColor($"{AnsiCodes.Bold}\t\t\tAll Diary Entries{AnsiCodes.Reset}", ConsoleColor.Yellow);
         Console.WriteLine("\n\t\t(press Enter to return to the menu)\n");
         
         List<string> entries = diary.ViewAllEntries();

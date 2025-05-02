@@ -87,7 +87,6 @@ and ate dinner with my family afterwards.
 ```
 ----------------------------------------------------------------------
 
-
                         All Diary Entries
                 (press Enter to return to the menu)
 
