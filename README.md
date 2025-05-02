@@ -2,7 +2,7 @@
   <img src="images/Digital Diary Main Banner.jpg" style="max-width: 600px; height: auto;" alt="DigitalDiary">
 </p>
 
-## 🌟 About the Project
+## 🌟 About
 **Digital Diary** is a simple, modular, console-based C# application designed to let users write, view, and search diary entries. Using file handling techniques, all entries are stored persistently in a text file. The project showcases core object-oriented programming (OOP) principles, particularly encapsulation and abstraction, in a practical and beginner-friendly manner.
 
 ## 📔 Table of Contents
@@ -64,7 +64,7 @@ Dear, Diary!
 > Select an option (1-4):
 ```
 
-_Write a New Entry:_
+**Write a New Entry:**
 ```
 ---------------------------------------------------------------------
 
@@ -83,7 +83,7 @@ and ate dinner with my family afterwards.
 ---------------------------------------------------------------------
 ```
 
-_View All Entries:_
+**View All Entries:**
 ```
 ----------------------------------------------------------------------
 
@@ -125,7 +125,7 @@ and ate dinner with my family afterwards.
 > Would you like to return to the main menu? (Y/N):
 ```
 
-_Search Entry by Date:_
+**Search Entry by Date:**
 ```
 ----------------------------------------------------------------------
 
