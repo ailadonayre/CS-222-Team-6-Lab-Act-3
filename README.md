@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="images/logo1.png" width="600" height="400" alt="DigitalDiary"> 
+  <img src="images/Digital Diary Main Banner.jpg" width="600" height="400" alt="DigitalDiary"> 
 </p>
 
 ## 🌟 About the Project
