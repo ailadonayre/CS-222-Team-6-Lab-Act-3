@@ -24,7 +24,7 @@ class Program
         
         while (running)
         {        
-            Console.WriteLine($"\n---------------------------------------------------------------------\n");    
+            Console.WriteLine($"\n{new string('-', 70)}\n");   
             Console.WriteLine($"{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}");
 
             WriteWithColor("Dear, ", ConsoleColor.Yellow); 
@@ -70,7 +70,7 @@ class Program
 
     static void WriteNewEntry(Diary diary)
     {
-        Console.WriteLine($"\n---------------------------------------------------------------------\n");
+        Console.WriteLine($"\n{new string('-', 70)}\n");
         WriteWithColor($"{AnsiCodes.Bold}\t\t\tWrite a New Entry{AnsiCodes.Reset}", ConsoleColor.Yellow);
         Console.WriteLine("\n\t(press Enter twice to save, or just Enter to cancel)");
         Console.WriteLine();
@@ -120,7 +120,7 @@ class Program
 
     static void ViewAllEntries(Diary diary)
     {
-        Console.WriteLine($"\n---------------------------------------------------------------------");
+        Console.WriteLine($"\n{new string('-', 70)}\n");
         WriteWithColor($"{AnsiCodes.Bold}\n\t\t\tAll Diary Entries{AnsiCodes.Reset}", ConsoleColor.Yellow);
         Console.WriteLine("\n\t\t(press Enter to return to the menu)\n");
         
@@ -175,44 +175,55 @@ class Program
 
     static void SearchByDate(Diary diary)
     {
-        Console.WriteLine($"\n---------------------------------------------------------------------");
-        WriteWithColor($"{AnsiCodes.Bold}\n\t\t\tSearch Entry by Date{AnsiCodes.Reset}", ConsoleColor.Yellow);
-        WriteWithColor($"{AnsiCodes.Bold}\n\n> {AnsiCodes.Reset}", ConsoleColor.Cyan);
+        Console.Clear();
+        Console.WriteLine($"\n{new string('-', 70)}\n");
+        WriteWithColor($"{AnsiCodes.Bold}\t\t\tSearch Entry by Date{AnsiCodes.Reset}\n", ConsoleColor.Yellow);
+
+        WriteWithColor($"{AnsiCodes.Bold}\n> {AnsiCodes.Reset}", ConsoleColor.Cyan);
         Console.Write($"Enter date to search {AnsiCodes.Bold}(YYYY-MM-DD){AnsiCodes.Reset} or press Enter to cancel: ");
-        string date = Console.ReadLine();
-        
+        string date = Console.ReadLine()?.Trim();
+
         if (string.IsNullOrEmpty(date))
         {
             WriteWithColor($"{AnsiCodes.Bold}\t>> {AnsiCodes.Reset}", ConsoleColor.Cyan);
-            Console.Write("Search canceled.\n");
+            Console.WriteLine("Search canceled.");
+            Thread.Sleep(1200);
             return;
         }
-        
+
         List<string> results = diary.SearchByDate(date);
-        
+
         if (results.Count == 0)
         {
             WriteWithColor($"{AnsiCodes.Bold}\t>> {AnsiCodes.Reset}", ConsoleColor.Cyan);
-            Console.Write($"No entries found for {AnsiCodes.Bold}{date}{AnsiCodes.Reset}.\n");
+            Console.Write("No entries found for ");
+            WriteWithColor($"{AnsiCodes.Bold}{date}{AnsiCodes.Reset}", ConsoleColor.Magenta);
+            Console.WriteLine(".\n");
         }
         else
-        {   
+        {
             WriteWithColor($"{AnsiCodes.Bold}> {AnsiCodes.Reset}", ConsoleColor.Cyan);
             Console.Write("Showing entries for ");
-            WriteWithColor($"{AnsiCodes.Bold}{date}{AnsiCodes.Reset}:\n\n", ConsoleColor.Magenta);
+            WriteWithColor($"{AnsiCodes.Bold}{date}{AnsiCodes.Reset}", ConsoleColor.Magenta);
+            Console.WriteLine(":\n");
+
             foreach (string line in results)
             {
-                if (line.StartsWith("[") && line.Contains("-") && line.Contains("]"))
+                if (line.StartsWith("[") && line.EndsWith("]") && line.Contains("-") && line.Contains(":"))
                 {
                     WriteWithColor(line + "\n", ConsoleColor.Magenta);
                 }
+                else if (string.IsNullOrWhiteSpace(line))
+                {
+                    Console.WriteLine();
+                }
                 else
                 {
-                    Console.WriteLine(line);
+                    Console.WriteLine($"{line}");
                 }
             }
         }
-        
+
         while (true)
         {
             WriteWithColor($"{AnsiCodes.Bold}> {AnsiCodes.Reset}", ConsoleColor.Cyan);

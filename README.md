@@ -40,33 +40,111 @@
 
 ## <a id="struct">📁 File Structure</a>
 ```
-├── main/
-│   ├── Program.cs       # Handles the menu and user interaction
-│   ├── Diary.cs         # Contains the Diary class with file handling logic
-│   └── diary.txt        # (Auto-created) File where diary entries are stored
+├── bin/Debug/net9.0
+│   └── diary.txt       # (Auto-created) File where diary entries are stored
+├── images              # Contains the images used for the README file
+├── obj
+├── Diary.cs            # Contains the Diary class with file handling logic
+├── Program.cs          # Handles the menu and user interaction
 ├── README.md
 ```
 
 ## <a id="output">🛠️ Sample Output</a>
 ```
-=== DIGITAL DIARY ===
+---------------------------------------------------------------------
+
+2025-05-03 01:30:34
+Dear, Diary!
+
 1. Write a New Entry
 2. View All Entries
 3. Search Entry by Date
 4. Exit
-Choose an option: 1
 
-Write your diary entry (press Enter to submit): Had a productive day learning C# file handling.
-Entry successfully written.
-
-Press any key to return to menu...
+> Select an option (1-4):
 ```
 
-_Search by date example:_
+_Write a New Entry:_
 ```
-Enter date to search (YYYY-MM-DD): 2025-05-01
----- Entries on 2025-05-01 ----
-2025-05-01 18:43:12 | Had a productive day learning C# file handling.
+---------------------------------------------------------------------
+
+                        Write a New Entry
+        (press Enter twice to save, or just Enter to cancel)
+
+Dear, Diary:
+
+Today, I went to the mall with my sister. When I got back home, I   
+walked my dog, Milly, and strolled down the park. I came back home
+and ate dinner with my family afterwards.
+
+
+        >> Your diary entry has been saved successfully!
+
+---------------------------------------------------------------------
+```
+
+_View All Entries:_
+```
+----------------------------------------------------------------------
+
+
+                        All Diary Entries
+                (press Enter to return to the menu)
+
+[2025-04-28 06:16:22]
+Hahahahhhahah dear diary bwahahah
+
+[2025-04-28 06:17:09]
+Dear diary blah blah balh
+
+[2025-05-02 23:22:28]
+Dear, Diary:
+Hahaha wala lang bye
+
+xo, Aila
+
+[2025-05-02 23:36:16]
+dddddd
+
+[2025-05-02 23:40:02]
+ggggggggggggggggggggggg
+
+[2025-05-02 23:41:23]
+jejeejjejeje
+
+[2025-05-03 00:31:29]
+Hi, good morning!
+
+[2025-05-03 01:32:48]
+Dear, Diary:
+
+Today, I went to the mall with my sister. When I got back home, I
+walked my dog, Milly, and strolled down the park. I came back home
+and ate dinner with my family afterwards.
+
+> Would you like to return to the main menu? (Y/N):
+```
+
+_Search Entry by Date:_
+```
+----------------------------------------------------------------------
+
+                        Search Entry by Date
+
+> Enter date to search (YYYY-MM-DD) or press Enter to cancel: 2025-05-03
+> Showing entries for 2025-05-03:
+
+[2025-05-03 00:31:29]
+Hi, good morning!
+
+[2025-05-03 01:32:48]
+Dear, Diary:
+
+Today, I went to the mall with my sister. When I got back home, I
+walked my dog, Milly, and strolled down the park. I came back home
+and ate dinner with my family afterwards.
+
+> Would you like to return to the main menu? (Y/N): 
 ```
 
 ## <a id="member">👥 Group Members</a>

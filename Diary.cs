@@ -40,30 +40,37 @@ public class Diary
     public List<string> SearchByDate(string date)
     {
         List<string> results = new List<string>();
-        if (File.Exists(filePath))
+        if (!File.Exists(filePath)) return results;
+
+        string[] allLines = File.ReadAllLines(filePath);
+        bool insideMatchingEntry = false;
+
+        for (int i = 0; i < allLines.Length; i++)
         {
-            string[] lines = File.ReadAllLines(filePath);
-            bool found = false;
-            
-            for (int i = 0; i < lines.Length; i++)
+            if (allLines[i].StartsWith($"[{date}") || 
+                allLines[i].StartsWith($"[{date.Split(' ')[0]}"))
             {
-                if (lines[i].StartsWith($"[{date}") || found)
+                insideMatchingEntry = true;
+                results.Add(allLines[i]);
+
+                i++;
+                while (i < allLines.Length && !allLines[i].StartsWith("["))
                 {
-                    found = true;
-                    results.Add(lines[i]);
-                    
-                    i++;
-                    while (i < lines.Length && !string.IsNullOrWhiteSpace(lines[i]) 
-                           && !lines[i].StartsWith("["))
+                    if (!string.IsNullOrWhiteSpace(allLines[i]))
                     {
-                        results.Add(lines[i]);
-                        i++;
+                        results.Add(allLines[i]);
                     }
-                    found = false;
-                    if (i < lines.Length) results.Add("");
+                    else if (i + 1 < allLines.Length && !allLines[i + 1].StartsWith("["))
+                    {
+                        results.Add(allLines[i]);
+                    }
+                    i++;
                 }
+                results.Add("");
+                if (i < allLines.Length) i--;
             }
         }
+
         return results;
     }
 }
