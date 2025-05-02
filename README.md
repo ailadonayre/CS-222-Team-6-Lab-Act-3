@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="logo1.png" width="600" height="400" alt="LogoInsert"> 
+  <img src="images/logo1.png" width="600" height="400" alt="DigitalDiary"> 
 </p>
 
 ## 🌟 About the Project
