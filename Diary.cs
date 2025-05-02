@@ -9,7 +9,6 @@ public class Diary
     public Diary(string path)
     {
         filePath = path;
-        // Create the file if it doesn't exist
         if (!File.Exists(filePath))
         {
             File.Create(filePath).Close();
@@ -23,7 +22,7 @@ public class Diary
         {
             writer.WriteLine($"[{timestamp}]");
             writer.WriteLine(text);
-            writer.WriteLine(); // Add empty line between entries
+            writer.WriteLine();
         }
     }
 
@@ -53,7 +52,6 @@ public class Diary
                     found = true;
                     results.Add(lines[i]);
                     
-                    // Add subsequent lines until we hit an empty line or next timestamp
                     i++;
                     while (i < lines.Length && !string.IsNullOrWhiteSpace(lines[i]) 
                            && !lines[i].StartsWith("["))
@@ -62,7 +60,7 @@ public class Diary
                         i++;
                     }
                     found = false;
-                    if (i < lines.Length) results.Add(""); // Add empty line between entries
+                    if (i < lines.Length) results.Add("");
                 }
             }
         }

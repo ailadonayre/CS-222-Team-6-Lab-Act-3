@@ -73,9 +73,9 @@ Enter date to search (YYYY-MM-DD): 2025-05-01
 | Name | SR-Code | 
 |------|---------|
 | [Calog, Chester King](https://github.com/ChesterCalog) | 23-09045 |   
-| [Donayre, Aila Roshiele](https://github.com/CambaRalphVincent-23-02389) | 23-00000 |  
-| [Villanueva, Daniel](https://github.com/ErixCrisostomo) | 23-01037 | 
-| [Tarcelo, Mark Niño](https://github.com/Paul-Raimiel-Gonda) | 23-00000 | 
+| [Donayre, Aila Roshiele](https://github.com/ailaroshiele) | 23-02175 |  
+| [Villanueva, Daniel](https://github.com/danielbvillanueva) | 23-01037 | 
+| [Tarcelo, Mark Niño](https://github.com/ElgatoMe0w) | 20-08675 | 
 
 ## <a id="ack">💎 Acknowledgements</a>
 Special thanks to our instructor for guiding us in learning C# file handling and OOP. This activity helped us apply classroom concepts to a real-world style application.
