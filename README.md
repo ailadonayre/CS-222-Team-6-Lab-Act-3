@@ -32,8 +32,7 @@
 
   📁 Code Reference:
 
-
-
+```
   private string filePath;
 
   public Diary(string path)
@@ -44,7 +43,7 @@
         File.Create(filePath).Close();
     }
   }
-
+```
 
   Only methods like WriteEntry, ViewAllEntries, and SearchByDate can access or modify the file. External classes cannot access filePath directly, enforcing encapsulation.
 
@@ -60,7 +59,7 @@
 
   📁 Code Reference:
   
-
+```
   public void WriteEntry(string text)
   {
       string timestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
@@ -71,7 +70,7 @@
           writer.WriteLine();
       }
   }
-
+```
 
   Users simply call WriteEntry("Today was a good day"), and the file-handling logic is hidden from them.
 
@@ -85,7 +84,7 @@
   🔒 PasswordProtectedDiary – Inheritance
   You can create a child class of Diary that includes password protection. This way, all existing functionality is inherited, and you can add access control logic on top.
 
-
+```
   public class PasswordProtectedDiary : Diary
   {
       private string password;
@@ -102,7 +101,7 @@
 
       // You could override WriteEntry or ViewAllEntries to enforce authentication
   }
-
+```
 
   🧠 Explanation:
   This demonstrates inheritance (extending Diary) and could also allow method overriding for protected access to entries.
@@ -115,7 +114,7 @@
   🏷️ TaggedDiary – Polymorphism
   You could use polymorphism to extend or overload diary methods to include tags or categories per entry.
 
-
+```
   public class TaggedDiary : Diary
   {
       public TaggedDiary(string path) : base(path) {}
@@ -126,7 +125,7 @@
           base.WriteEntry(taggedText);
       }
   }
-
+```
 
   🧠 Explanation:
   This demonstrates polymorphism via method overloading—same method name (WriteEntry), but different parameters.
