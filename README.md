@@ -22,15 +22,15 @@
 
 ## <a id="OOP">⚖️ OOP Principles Used</a>
 
-  ###🔐 Encapsulation
+  ### 🔐 Encapsulation
   Encapsulation is the bundling of data and methods within a class, and restricting direct access to the class’s internal components.
 
 
- ###✅ In This Project:
+ ### ✅ In This Project:
   The Diary class encapsulates the file handling logic. The internal data (filePath) is declared as private, and access is only provided through public methods. This hides   the implementation details and protects the internal state.
 
 
-  📁 Code Reference:
+### 📁 Code Reference:
 
 ```
   private string filePath;
@@ -53,7 +53,7 @@
   Abstraction allows a class to expose only essential behaviors while hiding implementation complexity.
 
 
-  ✅ In This Project:
+ ### ✅ In This Project:
   The Diary class abstracts file operations like writing and reading by providing easy-to-use methods. The main program doesn’t need to know anything about StreamWriter,     file creation, or line-by-line parsing.
 
 
