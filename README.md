@@ -82,7 +82,7 @@
 
 
   ### 🔒 PasswordProtectedDiary – Inheritance
-  You can create a child class of Diary that includes password protection. This way, all existing functionality is inherited, and you can add access control logic on top.
+  We can create a child class of Diary that includes password protection. This way, all existing functionality is inherited, and you can add access control logic on top.
 
 ```
   public class PasswordProtectedDiary : Diary
@@ -112,7 +112,7 @@
 
 
   ### 🏷️ TaggedDiary – Polymorphism
-  You could use polymorphism to extend or overload diary methods to include tags or categories per entry.
+   We could use polymorphism to extend or overload diary methods to include tags or categories per entry.
 
 ```
   public class TaggedDiary : Diary
