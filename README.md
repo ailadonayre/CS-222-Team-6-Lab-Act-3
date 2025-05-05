@@ -29,6 +29,7 @@ Encapsulation is the bundling of data and methods within a class, and restrictin
 The Diary class encapsulates the file handling logic. The internal data (filePath) is declared as private, and access is only provided through public methods. This hides the implementation details and protects the internal state.
 
 📁 Code Reference:
+
 private string filePath;
 
 public Diary(string path)
@@ -39,6 +40,7 @@ public Diary(string path)
         File.Create(filePath).Close();
     }
 }
+
 
 Only methods like WriteEntry, ViewAllEntries, and SearchByDate can access or modify the file. External classes cannot access filePath directly, enforcing encapsulation.
 
