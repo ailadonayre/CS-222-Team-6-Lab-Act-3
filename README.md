@@ -6,14 +6,14 @@
 **Digital Diary** is a simple, modular, console-based C# application designed to let users write, view, and search diary entries. Using file handling techniques, all entries are stored persistently in a text file. The project showcases core object-oriented programming (OOP) principles, particularly encapsulation and abstraction, in a practical and beginner-friendly manner.
 
 ## 📔 Table of Contents
--  [1. Program Features](#proj-feat)
--  [2. OOP principles used](#OOP)
--  [3. Instructions on running the app](#inst)
--  [4. File Structure](#struct)
--  [5. Sample Output](#output)
--  [6. Project Screenshots](#screenshots)
--  [7. Members](#member) 
--  [8. Acknowledgement](#ack) 
+-  [Program Features](#proj-feat)
+-  [OOP principles used](#OOP)
+-  [Instructions on running the app](#inst)
+-  [File Structure](#struct)
+-  [Sample Output](#output)
+-  [roject Screenshots](#screenshots)
+-  [Members](#member) 
+-  [Acknowledgement](#ack) 
 
 ## <a id="proj-feat">🎯 Program Features</a>
 - Write and save new diary entries with timestamps
