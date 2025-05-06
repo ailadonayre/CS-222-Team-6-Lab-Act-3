@@ -25,10 +25,8 @@
   ### 🔐 Encapsulation
   Encapsulation is the bundling of data and methods within a class, and restricting direct access to the class’s internal components.
 
-
  ### ✅ In This Project:
   The Diary class encapsulates the file handling logic. The internal data (filePath) is declared as private, and access is only provided through public methods. This hides   the implementation details and protects the internal state.
-
 
 ### 📁 Code Reference:
 
@@ -47,15 +45,11 @@
 
   Only methods like WriteEntry, ViewAllEntries, and SearchByDate can access or modify the file. External classes cannot access filePath directly, enforcing encapsulation.
 
-
-
   ### 🧩 Abstraction
   Abstraction allows a class to expose only essential behaviors while hiding implementation complexity.
 
-
  ### ✅ In This Project:
   The Diary class abstracts file operations like writing and reading by providing easy-to-use methods. The main program doesn’t need to know anything about StreamWriter,     file creation, or line-by-line parsing.
-
 
   ### 📁 Code Reference:
   
@@ -74,62 +68,8 @@
 
   Users simply call WriteEntry("Today was a good day"), and the file-handling logic is hidden from them.
 
-  *(Optional for extension: Inheritance and Polymorphism could be used to create versions of the diary with password protection or tagging.)*
-
-
-  ### 🧬 Inheritance
-  Inheritance allows new classes to reuse and extend the functionality of existing classes.
-
-
-  ### 🔒 PasswordProtectedDiary – Inheritance
-  We can create a child class of Diary that includes password protection. This way, all existing functionality is inherited, and you can add access control logic on top.
-
-```
-  public class PasswordProtectedDiary : Diary
-  {
-      private string password;
-
-      public PasswordProtectedDiary(string path, string password) : base(path)
-      {
-          this.password = password;
-      }
-
-      public bool Authenticate(string inputPassword)
-      {
-          return inputPassword == password;
-      }
-
-      // You could override WriteEntry or ViewAllEntries to enforce authentication
-  }
-```
-
-  ### 🧠 Explanation:
-  This demonstrates inheritance (extending Diary) and could also allow method overriding for protected access to entries.
-
-
-  ### 🔁 Polymorphism 
-  Polymorphism allows objects to take on multiple forms depending on context, typically using method overriding or interfaces.
-
-
-  ### 🏷️ TaggedDiary – Polymorphism
-   We could use polymorphism to extend or overload diary methods to include tags or categories per entry.
-
-```
-  public class TaggedDiary : Diary
-  {
-      public TaggedDiary(string path) : base(path) {}
-
-      public void WriteEntry(string text, string tag)
-      {
-          string taggedText = $"#{tag}\n{text}";
-          base.WriteEntry(taggedText);
-      }
-  }
-```
-
   ### 🧠 Explanation:
   This demonstrates polymorphism via method overloading—same method name (WriteEntry), but different parameters.
-
 
 ## <a id="inst">⚙️ Instructions to Run the App</a>
 1. Clone the repository from GitHub.
