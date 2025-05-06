@@ -11,8 +11,9 @@
 -  [3. Instructions on running the app](#inst)
 -  [4. File Structure](#struct)
 -  [5. Sample Output](#output)
--  [6. Members](#member) 
--  [7. Acknowledgement](#ack) 
+-  [6. Project Screenshots](#screenshots)
+-  [7. Members](#member) 
+-  [8. Acknowledgement](#ack) 
 
 ## <a id="proj-feat">🎯 Program Features</a>
 - Write and save new diary entries with timestamps
@@ -45,7 +46,7 @@
 
   Only methods like WriteEntry, ViewAllEntries, and SearchByDate can access or modify the file. External classes cannot access filePath directly, enforcing encapsulation.
 
-  ### 🧩 Abstraction
+  ### ⚙️ Abstraction
   Abstraction allows a class to expose only essential behaviors while hiding implementation complexity.
 
  ### ✅ In This Project:
@@ -185,6 +186,20 @@ and ate dinner with my family afterwards.
 
 > Would you like to return to the main menu? (Y/N): 
 ```
+
+## <a id="screenshots">🛠️ Project Screenshots</a>
+<p align="center">
+  <img src="images/MainMenu.png" style="max-width: 600px; height: auto;" alt="DigitalDiary">
+</p>
+<p align="center">
+  <img src="images/WriteANewEntry.png" style="max-width: 600px; height: auto;" alt="DigitalDiary">
+</p>
+<p align="center">
+  <img src="images/AllDiaryEntries.png" style="max-width: 600px; height: auto;" alt="DigitalDiary">
+</p>
+<p align="center">
+  <img src="images/SearchEntryByDate.png" style="max-width: 600px; height: auto;" alt="DigitalDiary">
+</p>
 
 ## <a id="member">👥 Group Members</a>
 | Name | SR-Code | 
