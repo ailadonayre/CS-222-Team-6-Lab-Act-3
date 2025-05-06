@@ -205,7 +205,7 @@ and ate dinner with my family afterwards.
 | Name | SR-Code | 
 |------|---------|
 | [Calog, Chester King](https://github.com/ChesterCalog) | 23-09045 |   
-| [Donayre, Aila Roshiele](https://github.com/ailaroshiele) | 23-02175 |  
+| [Donayre, Aila Roshiele](https://github.com/ailadonayre) | 23-02175 |  
 | [Villanueva, Daniel](https://github.com/danielbvillanueva) | 23-01037 | 
 | [Tarcelo, Mark Niño](https://github.com/ElgatoMe0w) | 20-08675 | 
 
