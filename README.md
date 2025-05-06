@@ -210,4 +210,4 @@ and ate dinner with my family afterwards.
 | [Tarcelo, Mark Niño](https://github.com/ElgatoMe0w) | 20-08675 | 
 
 ## <a id="ack">💎 Acknowledgements</a>
-Special thanks to our instructor for guiding us in learning C# file handling and OOP. This activity helped us apply classroom concepts to a real-world style application.
+Special thanks to our instructor, **Ms. Fatima Marie Agdon**, for guiding us in learning C# file handling and OOP. This activity helped us apply classroom concepts to a real-world style application.
