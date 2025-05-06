@@ -46,7 +46,7 @@
 
   Only methods like WriteEntry, ViewAllEntries, and SearchByDate can access or modify the file. External classes cannot access filePath directly, enforcing encapsulation.
 
-  ### ⚙️ Abstraction
+  ### 🔐 Abstraction
   Abstraction allows a class to expose only essential behaviors while hiding implementation complexity.
 
  ### ✅ In This Project:
@@ -187,7 +187,7 @@ and ate dinner with my family afterwards.
 > Would you like to return to the main menu? (Y/N): 
 ```
 
-## <a id="screenshots">🛠️ Project Screenshots</a>
+## <a id="screenshots">📸 Project Screenshots</a>
 <p align="center">
   <img src="images/MainMenu.png" style="max-width: 600px; height: auto;" alt="DigitalDiary">
 </p>
