@@ -86,6 +86,8 @@
 ├── images              # Contains the images used for the README file
 ├── obj
 ├── Diary.cs            # Contains the Diary class with file handling logic
+├── DigitalDiary.csproj
+├── DigitalDiary.sln
 ├── Program.cs          # Handles the menu and user interaction
 ├── README.md
 ```
